@@ -18,6 +18,7 @@ $dao = new CrudDAO();
 
 $dao->createTable($query);
 
-//header("Location:liste.php");
+header("C:/wamp64/www/sql/liste.php");
+
 
 

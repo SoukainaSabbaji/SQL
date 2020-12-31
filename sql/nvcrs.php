@@ -33,7 +33,7 @@ $COURS["MODULE_FORMAT"] = $COURS2["MODULE_FORMAT"][0];
 $COURS["FIL_ETD"] = $COURS2["FIL_ETD"][0];
 
 if(isset($iduser) && $iduser>0){
-$url="Modifier.php";
+$url="modifier.php";
 $label="Modifier";
 }else{
 $url="inserer.php";
@@ -91,11 +91,11 @@ Semestre:<br/>
 <input type="text" name="Semestre" id="Semestre" value="<?=$COURS["SEMESTRE"] ?>" /><hr/>
 
 Module_Format<br/>
-<input type="Module_Format" name="Module_Format" id="Module_Format" value="<?=$COURS["MODULE_FORMAT"] ?>" /><hr/>
+<input type="text" name="Module_Format" id="Module_Format" value="<?=$COURS["MODULE_FORMAT"] ?>" /><hr/>
 Fil_etd<br/>
-<input type="Fil_etd" name="Fil_etd" id="Fil_etd" value="<?=$COURS["FIL_ETD"] ?>" /><hr/>
+<input type="text" name="Fil_etd" id="Fil_etd" value="<?=$COURS["FIL_ETD"] ?>" /><hr/>
 <input type="submit" name="ajouter" id="ajouter" value="<?=$label ?>" /><br/>
 
 </form>
 <hr/>
-<a href='liste.php'> << Retour</a>
+<a href='liste.php')'>Retour</a>

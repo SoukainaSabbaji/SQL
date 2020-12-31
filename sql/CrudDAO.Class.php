@@ -103,13 +103,14 @@ public function update($table, Array $donnees, $critere) {
     }
 }
 
-public function updateFree($table, Array $donnees, $critere) {
+public function updateFree($table, Array $donnees, $critere) 
+{
 
     foreach ($donnees as $inds => $vals) {
         (is_int($vals)) ? $vals = $vals : $vals = "'{$vals}'";
         $champs[] = "{$inds} ={$vals}";
     }
-    $champs = implode(", ", $champs);
+    //$champs = implode(", ", $champs);
     try {
         $stmt ="update {$table} set {$champs} where {$critere}";          
         $s = oci_parse($this->db, $stmt);
@@ -125,13 +126,15 @@ public function updateFree($table, Array $donnees, $critere) {
 
 
 
-    public function delete($table, $critere) {
+    public function delete($table, $critere) 
+    {
         try {          
              $stmt = "delete from {$table}  where {$critere}";
              $s = oci_parse($this->db, $stmt);
              $r = oci_execute($s);  // automatically commit
              parent::getting();
-        } catch (Exception $e) {
+        } catch (Exception $e) 
+        {
             echo $e->getMessage() . "<br>Error:  "; 
             echo "<b>" . $e->getTraceAsString() . "</b>"; 
             parent::getting();

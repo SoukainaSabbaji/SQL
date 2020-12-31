@@ -8,7 +8,8 @@ require_once 'C:/wamp64/www/sql/CrudDAO.Class.php';
 $NUM_COURS = isset($_GET["NUM_COURS"]);
 $table="COURS";
 $critere="NUM_COURS=".$NUM_COURS;
-if(isset($NUM_COURS) && $NUM_COURS>0){
+if(isset($NUM_COURS) && $NUM_COURS>0)
+{
 
 $dao = new CrudDAO();
 

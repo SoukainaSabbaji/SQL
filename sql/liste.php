@@ -7,9 +7,10 @@ require_once 'C:/wamp64/www/sql/CrudDAO.Class.php';
 
 $dao = new CrudDAO();
 
+
 $stid = $dao->read("COURS");
 echo"<style type='text/css'> th, td{padding:10px;} </style>";
-echo "<a href='nvcours.php'>Ajouter un cours</a><hr/>";
+echo "<a href='nvcrs.php'>Ajouter un cours</a><hr/>";
 print "<table border='1' cellspacing='0'>"
       ."<tr  style='padding:10px; margin:10px;'><th>NUM_COURS</th>  <th>DUREE_COURS</th>  <th>DESCRIPTION_</th>  <th>DATE_DIFF_COURS</th> <th>SEMESTRE</th>  <th>MODULE_FORMAT</th> <th>FIL_ETD</th><th colspan='2'>Action</th></tr>";
 $i=0;
